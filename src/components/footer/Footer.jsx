@@ -9,7 +9,7 @@ export function Footer() {
             <p className="font-display text-2xl text-foreground">Marvel Travel UK</p>
             <p className="max-w-md text-sm text-muted">
               ATOL-protected holidays, curated packages, and competitive fares from
-              the UK — with specialists on hand when you need them
+              the UK — with specialists on hand when you need them.
             </p>
           </div>
           <div>
