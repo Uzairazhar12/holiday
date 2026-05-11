@@ -56,7 +56,7 @@ export function TourCard({ tour, index = 0 }) {
               ) : null}
             </div>
             <Button asChild>
-              <Link to={`/tours/${tour.slug}`}>View detail</Link>
+              <Link to={`/tours/${tour.slug}`}>View details</Link>
             </Button>
           </div>
         </div>
