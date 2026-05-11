@@ -46,7 +46,7 @@ export function TourCard({ tour, index = 0 }) {
           </div>
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="text-xs text-muted">Fro</p>
+              <p className="text-xs text-muted">From</p>
               <p className="font-display text-2xl text-primary">
                 £{tour.priceFrom?.toLocaleString?.() ?? tour.priceFrom}
                 <span className="text-sm font-sans text-muted">pp</span>
