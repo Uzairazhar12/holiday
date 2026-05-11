@@ -49,7 +49,7 @@ export function TourCard({ tour, index = 0 }) {
               <p className="text-xs text-muted">From</p>
               <p className="font-display text-2xl text-primary">
                 £{tour.priceFrom?.toLocaleString?.() ?? tour.priceFrom}
-                <span className="text-sm font-sans text-muted">pp</span>
+                <span className="text-sm font-sans text-muted">p</span>
               </p>
               {tour.depositNote ? (
                 <p className="text-xs text-muted">{tour.depositNote}</p>
