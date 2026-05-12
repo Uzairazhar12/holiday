@@ -1,4 +1,4 @@
-EPIC HOLIDAYS — hero background images
+EPIC TOUR — hero background images
 =======================================
 
 1. Put your JPG / WebP / PNG files in this folder (same folder as this file).

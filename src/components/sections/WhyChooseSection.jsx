@@ -1,4 +1,5 @@
 import { Headphones, Lock, ShieldCheck, Sparkles } from 'lucide-react'
+import { BRAND } from '@/config/brand'
 
 const items = [
   {
@@ -29,7 +30,7 @@ export function WhyChooseSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            Why book with EPIC HOLIDAYS
+            Why book with {BRAND.name}
           </p>
           <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             A calmer way to lock in flights and packages

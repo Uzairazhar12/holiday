@@ -59,7 +59,7 @@ export default function Tours() {
   return (
     <>
       <SEO
-        title="Holiday packages & tours"
+        title="Tour packages & curated trips"
         description="Browse curated multi-centre tours, luxury escapes and beach breaks departing from the UK."
         canonicalPath="/tours"
       />

@@ -14,6 +14,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { notify } from '@/utils/notify'
+import { BRAND } from '@/config/brand'
 
 export default function BlogFormPage() {
   const { id } = useParams()
@@ -34,7 +35,7 @@ export default function BlogFormPage() {
       slug: '',
       excerpt: '',
       coverImage: '',
-      author: 'EPIC HOLIDAYS',
+      author: BRAND.name,
       publishedAt: new Date().toISOString().slice(0, 10),
       seoTitle: '',
       seoDescription: '',
@@ -57,7 +58,7 @@ export default function BlogFormPage() {
         slug: row.slug || '',
         excerpt: row.excerpt || '',
         coverImage: row.coverImage || '',
-        author: row.author || 'EPIC HOLIDAYS',
+        author: row.author || BRAND.name,
         publishedAt: row.publishedAt || '',
         seoTitle: row.seoTitle || '',
         seoDescription: row.seoDescription || '',

@@ -39,7 +39,7 @@ export const DEMO_TOURS = [
       'Baggage & taxes as stated',
     ],
     excluded: ['Travel insurance', 'Meals not mentioned'],
-    seoTitle: 'Phuket Elephant Hills Khao Lak Holiday | EPIC HOLIDAYS',
+    seoTitle: 'Phuket Elephant Hills Khao Lak Holiday | EPIC TOUR',
     seoDescription:
       '12-night Thailand multi-centre holiday with Elephant Hills and beach stays.',
   },
@@ -202,9 +202,9 @@ export const DEMO_BLOGS = [
       'Shoulder seasons bring mild weather, smaller crowds, and great value across Istanbul and the Aegean.',
     coverImage:
       'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1200&q=80',
-    author: 'EPIC HOLIDAYS',
+    author: 'EPIC TOUR',
     publishedAt: '2026-02-01',
-    seoTitle: 'Best Time to Visit Turkey | EPIC HOLIDAYS',
+    seoTitle: 'Best Time to Visit Turkey | EPIC TOUR',
     seoDescription:
       'Season-by-season guide to Turkey for city breaks and coastal escapes.',
     contentHtml: `<p>Turkey shines in spring and early autumn — comfortable sightseeing in Istanbul and warm seas along the coast.</p><p>Book flexible fares where possible and combine city nights with a short coastal stay.</p>`,
@@ -217,7 +217,7 @@ export const DEMO_BLOGS = [
       'From beach villas to lagoon suites — what to expect and how to maximise value.',
     coverImage:
       'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1200&q=80',
-    author: 'EPIC HOLIDAYS',
+    author: 'EPIC TOUR',
     publishedAt: '2026-03-15',
     seoTitle: 'Maldives Villa Types Explained',
     seoDescription:

@@ -21,7 +21,7 @@ const links = [
 ]
 
 const moreLinks = [
-  { to: '/tours', label: 'Holidays' },
+  { to: '/tours', label: 'Tours' },
   { to: '/blogs', label: 'Blog' },
 ]
 

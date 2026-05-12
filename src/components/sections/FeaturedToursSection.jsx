@@ -20,7 +20,7 @@ export function FeaturedToursSection({ tours }) {
             </p>
           </div>
           <Button variant="outline" asChild>
-            <Link to="/tours">Browse all holidays</Link>
+            <Link to="/tours">Browse all tours</Link>
           </Button>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">

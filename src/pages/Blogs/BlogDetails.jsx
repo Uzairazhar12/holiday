@@ -4,6 +4,7 @@ import { SEO } from '@/components/common/SEO'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
 import { getBlogBySlug } from '@/services/blogService'
+import { BRAND } from '@/config/brand'
 
 export default function BlogDetails() {
   const { slug } = useParams()
@@ -50,7 +51,7 @@ export default function BlogDetails() {
     '@type': 'BlogPosting',
     headline: blog.title,
     datePublished: blog.publishedAt,
-    author: { '@type': 'Organization', name: blog.author || 'EPIC HOLIDAYS' },
+    author: { '@type': 'Organization', name: blog.author || BRAND.name },
     image: blog.coverImage,
     description: blog.excerpt,
   }

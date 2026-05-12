@@ -1,5 +1,5 @@
 /**
- * EPIC HOLIDAYS — brand colours (avoid orange + indigo “template” look).
+ * EPIC TOUR — brand colours (teal + slate; avoid orange + indigo “template” look).
  * Use these for hero / header; Tailwind @theme maps primary to the same family.
  */
 export const EPIC = {

@@ -1,6 +1,7 @@
 import { SEO } from '@/components/common/SEO'
 import { Button } from '@/components/ui/button'
 import { Link } from 'react-router-dom'
+import { BRAND } from '@/config/brand'
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
       <div className="border-b border-border bg-card py-14">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            About EPIC HOLIDAYS
+            About {BRAND.name}
           </p>
           <h1 className="mt-4 font-display text-4xl text-foreground sm:text-5xl">
             Your concierge-style partner for worldwide escapes

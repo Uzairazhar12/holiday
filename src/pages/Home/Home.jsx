@@ -49,7 +49,7 @@ export default function Home() {
     <>
       <SEO
         title="UK holidays & flights"
-        description="Book UK holidays, short breaks and long-haul flights with EPIC HOLIDAYS — tailored routing, ATOL-backed packages and a consultant-led booking process."
+        description="Book tours, UK breaks and long-haul flights with EPIC TOUR — tailored routing, ATOL-backed packages and consultant-led support from enquiry to departure."
         canonicalPath="/"
         jsonLd={travelAgencySchema()}
       />

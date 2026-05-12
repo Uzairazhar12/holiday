@@ -13,7 +13,7 @@ function buildNotesFromHero(hero) {
   if (!hero || !hero.type) return ''
   const lines = []
   if (hero.type === 'holiday') {
-    lines.push('Source: Home page — Holidays search')
+    lines.push('Source: Home page — Tour packages search')
     if (hero.from) lines.push(`Flying from: ${hero.from}`)
     if (hero.to) lines.push(`Flying to: ${hero.to}`)
     if (hero.travellers) lines.push(`Travellers (adt-chd-inf): ${hero.travellers}`)

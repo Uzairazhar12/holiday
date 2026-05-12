@@ -172,7 +172,7 @@ export function HeroSection() {
           className="text-center text-white"
         >
           <h1 className="font-display text-3xl font-extrabold leading-[1.15] tracking-tight drop-shadow-sm sm:text-4xl md:text-5xl">
-            EPIC HOLIDAYS — UK holiday packages, city breaks and worldwide flights
+            EPIC TOUR — guided tours, holiday packages and worldwide flights
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
             Compare airline bundles, resort contracts and ground transport in one place. We
@@ -197,7 +197,7 @@ export function HeroSection() {
               )}
             >
               <Palmtree className="h-4 w-4" aria-hidden />
-              Holidays
+              Tour packages
             </button>
             <button
               type="button"
@@ -304,7 +304,7 @@ export function HeroSection() {
               </div>
               <Button type="submit" className={gradientBtn}>
                 <Search className="mr-2 h-5 w-5" aria-hidden />
-                Search Holidays
+                Search tour packages
               </Button>
             </form>
           ) : (
