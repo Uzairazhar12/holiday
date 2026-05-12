@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu } from 'lucide-react'
-import { MessageCircle } from 'lucide-react'
+import { Menu, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   Sheet,
@@ -34,10 +33,10 @@ export function Navbar() {
     <div className="sticky top-0 z-50 shadow-sm">
       <EpicTopBar />
       <header className="border-b border-slate-200/90 bg-white">
-        <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-[4.75rem] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
           <EpicLogo />
 
-          <nav className="hidden items-center gap-10 md:flex">
+          <nav className="hidden items-center gap-11 md:flex">
             {links.map((l) => (
               <NavLink
                 key={l.to}
@@ -45,9 +44,9 @@ export function Navbar() {
                 end={l.end}
                 className={({ isActive }) =>
                   cn(
-                    'relative text-sm font-semibold text-slate-600 transition hover:text-teal-800',
+                    'relative text-[1.05rem] font-bold text-slate-700 transition hover:text-teal-900',
                     isActive &&
-                      'font-bold text-teal-900 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-teal-600',
+                      'text-teal-900 after:absolute after:-bottom-2.5 after:left-0 after:h-1 after:w-full after:rounded-full after:bg-teal-600',
                   )
                 }
               >
@@ -59,11 +58,11 @@ export function Navbar() {
           <div className="hidden items-center gap-3 md:flex">
             <Button
               asChild
-              className="gap-2 rounded-full border border-[#25D366] bg-white px-4 text-[#128C7E] shadow-none hover:bg-[#25D366]/10"
+              className="h-11 gap-2 rounded-full border-2 border-[#25D366] bg-white px-5 text-base font-bold text-[#0f766e] shadow-none hover:bg-emerald-50"
               variant="outline"
             >
               <a href={wa} target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-4 w-4 text-[#25D366]" aria-hidden />
+                <MessageCircle className="h-5 w-5 text-[#25D366]" aria-hidden />
                 WhatsApp
               </a>
             </Button>
@@ -77,22 +76,25 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="flex flex-col gap-6">
               <SheetHeader>
-                <SheetTitle className="font-display text-left text-2xl text-slate-900">
+                <SheetTitle className="font-display text-left text-2xl font-bold text-slate-900">
                   Menu
                 </SheetTitle>
               </SheetHeader>
-              <nav className="flex flex-col gap-3">
+              <nav className="flex flex-col gap-2">
                 {[...links, ...moreLinks].map((l) => (
                   <Link
                     key={l.to}
                     to={l.to}
                     onClick={() => setOpen(false)}
-                    className="rounded-lg px-2 py-2 text-lg text-slate-800 hover:bg-slate-50"
+                    className="rounded-lg px-3 py-3 text-lg font-bold text-slate-800 hover:bg-slate-50"
                   >
                     {l.label}
                   </Link>
                 ))}
-                <Button asChild className="mt-2 w-full rounded-full bg-[#25D366] text-white hover:bg-[#20bd5a]">
+                <Button
+                  asChild
+                  className="mt-3 h-12 w-full rounded-full bg-[#25D366] text-base font-bold text-white hover:bg-[#20bd5a]"
+                >
                   <a href={wa} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
                     WhatsApp
                   </a>

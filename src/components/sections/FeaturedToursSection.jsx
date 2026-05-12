@@ -9,18 +9,18 @@ export function FeaturedToursSection({ tours }) {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-xl space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              Curated escapes
+              Featured packages
             </p>
-            <h2 className="font-display text-3xl text-foreground sm:text-4xl">
-              Featured tours customers love right now
+            <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+              Hand-picked tours with transparent per-person pricing
             </h2>
             <p className="text-muted">
-              Multi-centre Asia, ultra-luxe Maldives combos and Adriatic culture —
-              each itinerary refined by our consultants for smooth routing.
+              Each shortlist is checked for realistic connections, sensible layovers and
+              hotel quality — so the trip you see is the trip you board.
             </p>
           </div>
           <Button variant="outline" asChild>
-            <Link to="/tours">View all tours</Link>
+            <Link to="/tours">Browse all holidays</Link>
           </Button>
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">

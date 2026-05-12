@@ -9,17 +9,21 @@ export function BlogPreviewSection({ blogs }) {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-xl space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              Inspiring itineraries
+              Travel notes
             </p>
-            <h2 className="font-display text-3xl text-foreground sm:text-4xl">
-              Guides & seasonal insights from our travel desk
+            <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
+              Practical ideas for UK departures
             </h2>
+            <p className="text-sm text-muted">
+              Seasonal routing tips, visa reminders and packing lists written by our
+              consultants — not syndicated feeds.
+            </p>
           </div>
           <Link
             to="/blogs"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+            className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:underline"
           >
-            Read all articles
+            View all posts
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -44,17 +48,17 @@ export function BlogPreviewSection({ blogs }) {
                 <p className="text-xs uppercase tracking-wide text-muted">
                   {b.publishedAt}
                 </p>
-                <h3 className="font-display text-2xl text-foreground">
+                <h3 className="font-display text-xl font-bold text-foreground sm:text-2xl">
                   <Link className="hover:text-primary" to={`/blogs/${b.slug}`}>
                     {b.title}
                   </Link>
                 </h3>
                 <p className="text-sm text-muted">{b.excerpt}</p>
                 <Link
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-primary"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-primary"
                   to={`/blogs/${b.slug}`}
                 >
-                  Continue reading
+                  Read article
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </Link>
               </div>

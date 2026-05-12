@@ -172,7 +172,7 @@ export const DEMO_TESTIMONIALS = [
     name: 'Amelia R.',
     location: 'London',
     quote:
-      'Flawless routing and brilliant support on our Maldives booking — everything felt first class.',
+      'Our consultant laid out three Maldives routings with layover times we could live with — no guesswork at the airport.',
     rating: 5,
   },
   {
@@ -180,7 +180,7 @@ export const DEMO_TESTIMONIALS = [
     name: 'James K.',
     location: 'Manchester',
     quote:
-      'Clear pricing, fast callbacks, and they matched a deal we saw elsewhere plus extra credit.',
+      'Deposit schedule and change fees were spelled out on the first call. That honesty sold the trip for us.',
     rating: 5,
   },
   {
@@ -188,7 +188,7 @@ export const DEMO_TESTIMONIALS = [
     name: 'Sana M.',
     location: 'Birmingham',
     quote:
-      'Multi-stop Asia itinerary was tailored perfectly — transfers and hotels were spot on.',
+      'Four sectors across Asia with tight connections — every transfer driver had our names and flight numbers.',
     rating: 5,
   },
 ]

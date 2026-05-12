@@ -1,7 +1,8 @@
 /** Public marketing / contact defaults for EPIC HOLIDAYS */
 export const BRAND = {
   name: 'EPIC HOLIDAYS',
-  tagline: 'Your trusted partner for holiday deals from the UK.',
+  tagline:
+    'Independent UK travel desk for hand-built itineraries, competitive airfares and clear paperwork.',
   email: 'info@epicholidays.co.uk',
   phoneDisplay: '0203 332 2614',
   phoneTel: 'tel:02033322614',

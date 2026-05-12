@@ -15,7 +15,6 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { BRAND } from '@/config/brand'
 import { EPIC } from '@/config/epicTheme'
 import { getHeroBackgroundImageUrls, HERO_FALLBACK_IMAGES } from '@/config/heroBackgrounds'
 import { useHeroSearchStore } from '@/store/heroSearchStore'
@@ -172,11 +171,13 @@ export function HeroSection() {
           transition={{ duration: 0.55 }}
           className="text-center text-white"
         >
-          <h1 className="font-display text-4xl font-semibold tracking-tight drop-shadow-sm sm:text-5xl md:text-6xl">
-            {BRAND.name}
+          <h1 className="font-display text-3xl font-extrabold leading-[1.15] tracking-tight drop-shadow-sm sm:text-4xl md:text-5xl">
+            EPIC HOLIDAYS — UK holiday packages, city breaks and worldwide flights
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
-            {BRAND.tagline} Flights, packages, and memorable getaways with expert support.
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-white/90 sm:text-base">
+            Compare airline bundles, resort contracts and ground transport in one place. We
+            build itineraries around your dates and budget, then walk you through deposits,
+            ATOL paperwork and changes before you pay.
           </p>
         </motion.div>
 

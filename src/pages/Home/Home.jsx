@@ -48,8 +48,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title="Cheap flights & luxury holiday packages"
-        description="EPIC HOLIDAYS — curated tours, premium holidays and competitive fares from the UK with ATOL protection and expert support."
+        title="UK holidays & flights"
+        description="Book UK holidays, short breaks and long-haul flights with EPIC HOLIDAYS — tailored routing, ATOL-backed packages and a consultant-led booking process."
         canonicalPath="/"
         jsonLd={travelAgencySchema()}
       />
