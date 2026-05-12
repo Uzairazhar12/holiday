@@ -35,7 +35,11 @@ export function EpicLogo({
       aria-label={`${BRAND.name} home`}
     >
       <img
-        src={BRAND.logoSrc}
+        src={
+          BRAND.logoAssetVersion
+            ? `${BRAND.logoSrc}?v=${BRAND.logoAssetVersion}`
+            : BRAND.logoSrc
+        }
         alt=""
         width={400}
         height={144}

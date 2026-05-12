@@ -3,8 +3,9 @@ export const BRAND = {
   name: 'EPIC TOUR',
   /** Matches logo strapline */
   tagline: 'Explore. Discover. Experience.',
-  /** Full lockup (PNG) — same artwork as provided brand asset */
+  /** Full lockup (PNG) in `/public/brand/` — update `logoAssetVersion` when file changes */
   logoSrc: '/brand/epic-tour-logo.png',
+  logoAssetVersion: 'f7a87f7f',
   email: 'info@epictour.co.uk',
   phoneDisplay: '0203 332 2614',
   phoneTel: 'tel:02033322614',
