@@ -10,8 +10,8 @@ export function Footer() {
           <div className="flex flex-col items-center gap-4 text-center sm:col-span-2 sm:items-start sm:text-left md:col-span-2">
             <EpicLogo variant="footer" className="sm:justify-start" />
             <p className="max-w-md text-sm leading-relaxed text-muted">
-              {BRAND.tagline} ATOL-protected packages, competitive fares and specialist
-              support from the UK.
+              ATOL-protected packages, competitive fares and specialist support from the
+              UK.
             </p>
           </div>
 

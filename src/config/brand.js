@@ -1,11 +1,9 @@
 /** Public marketing / contact defaults for EPIC TOUR */
 export const BRAND = {
   name: 'EPIC TOUR',
-  /** Matches logo strapline */
-  tagline: 'Explore. Discover. Experience.',
-  /** Full lockup (PNG) in `/public/brand/` — update `logoAssetVersion` when file changes */
+  /** Full lockup (PNG) in `/public/brand/` — bump `logoAssetVersion` when file changes */
   logoSrc: '/brand/epic-tour-logo.png',
-  logoAssetVersion: 'f7a87f7f',
+  logoAssetVersion: '8d7d8378',
   email: 'info@epictour.co.uk',
   phoneDisplay: '0203 332 2614',
   phoneTel: 'tel:02033322614',
