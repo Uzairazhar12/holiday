@@ -49,7 +49,7 @@ export default function Home() {
     <>
       <SEO
         title="Cheap flights & luxury holiday packages"
-        description="Marvel Travel UK — curated tours, premium holidays and competitive fares from the UK with ATOL protection and expert support."
+        description="EPIC HOLIDAYS — curated tours, premium holidays and competitive fares from the UK with ATOL protection and expert support."
         canonicalPath="/"
         jsonLd={travelAgencySchema()}
       />

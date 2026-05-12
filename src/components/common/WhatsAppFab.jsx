@@ -1,8 +1,9 @@
 import { MessageCircle } from 'lucide-react'
+import { BRAND } from '@/config/brand'
 
 export function WhatsAppFab({ phone }) {
-  const wa = phone || import.meta.env.VITE_WHATSAPP_NUMBER || '447520637686'
-  const href = `https://wa.me/${wa.replace(/\D/g, '')}`
+  const wa = phone || BRAND.whatsappDigits
+  const href = `https://wa.me/${String(wa).replace(/\D/g, '')}`
 
   return (
     <a

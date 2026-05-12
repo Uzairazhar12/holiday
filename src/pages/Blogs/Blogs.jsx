@@ -27,7 +27,7 @@ export default function Blogs() {
     <>
       <SEO
         title="Travel inspiration"
-        description="Guides, seasonal tips and destination deep dives from the Marvel Travel editorial desk."
+        description="Guides, seasonal tips and destination deep dives from the EPIC HOLIDAYS editorial desk."
         canonicalPath="/blogs"
       />
       <div className="border-b border-border bg-card py-12">

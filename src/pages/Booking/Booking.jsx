@@ -25,7 +25,7 @@ export default function Booking() {
     <>
       <SEO
         title="Book your holiday"
-        description="Submit your travel details — Marvel Travel UK specialists confirm routing, pricing and ATOL paperwork."
+        description="Submit your travel details — EPIC HOLIDAYS specialists confirm routing, pricing and ATOL paperwork."
         canonicalPath="/booking"
       />
       <div className="mx-auto max-w-3xl px-4 py-14 lg:px-8">

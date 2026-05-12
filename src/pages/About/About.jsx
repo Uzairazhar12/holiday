@@ -13,7 +13,7 @@ export default function About() {
       <div className="border-b border-border bg-card py-14">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            About Marvel Travel UK
+            About EPIC HOLIDAYS
           </p>
           <h1 className="mt-4 font-display text-4xl text-foreground sm:text-5xl">
             Your concierge-style partner for worldwide escapes

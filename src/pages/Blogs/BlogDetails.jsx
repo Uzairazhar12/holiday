@@ -50,7 +50,7 @@ export default function BlogDetails() {
     '@type': 'BlogPosting',
     headline: blog.title,
     datePublished: blog.publishedAt,
-    author: { '@type': 'Organization', name: blog.author || 'Marvel Travel UK' },
+    author: { '@type': 'Organization', name: blog.author || 'EPIC HOLIDAYS' },
     image: blog.coverImage,
     description: blog.excerpt,
   }

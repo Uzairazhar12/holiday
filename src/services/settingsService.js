@@ -1,14 +1,15 @@
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { getDb, isFirebaseConfigured } from '@/api/firebase'
+import { BRAND } from '@/config/brand'
 
 const SETTINGS_ID = 'site'
 
 const defaults = {
-  siteName: 'Marvel Travel UK',
-  phone: '0203 332 2614',
-  email: 'info@marveltravel.example',
-  whatsapp: import.meta.env.VITE_WHATSAPP_NUMBER || '447520637686',
-  address: '40 Arundel Gardens, Ilford IG3 9SX',
+  siteName: BRAND.name,
+  phone: BRAND.phoneDisplay,
+  email: BRAND.email,
+  whatsapp: BRAND.whatsappDigits,
+  address: BRAND.address,
 }
 
 export async function getSiteSettings() {

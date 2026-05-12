@@ -29,7 +29,7 @@ export function WhyChooseSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            Why Marvel Travel UK
+            Why EPIC HOLIDAYS
           </p>
           <h2 className="font-display text-3xl text-foreground sm:text-4xl">
             Boutique service meets sharp airfare sourcing

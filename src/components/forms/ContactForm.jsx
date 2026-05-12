@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import { useEffect } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { contactSchema } from '@/components/forms/schemas'
 import { Button } from '@/components/ui/button'
@@ -8,7 +9,28 @@ import { Textarea } from '@/components/ui/textarea'
 import { createBooking } from '@/services/bookingService'
 import { notify } from '@/utils/notify'
 
-export function ContactForm({ defaultDestination }) {
+function buildNotesFromHero(hero) {
+  if (!hero || !hero.type) return ''
+  const lines = []
+  if (hero.type === 'holiday') {
+    lines.push('Source: Home page — Holidays search')
+    if (hero.from) lines.push(`Flying from: ${hero.from}`)
+    if (hero.to) lines.push(`Flying to: ${hero.to}`)
+    if (hero.travellers) lines.push(`Travellers (adt-chd-inf): ${hero.travellers}`)
+  } else if (hero.type === 'flight') {
+    lines.push('Source: Home page — Flights search')
+    lines.push(`Trip: ${hero.trip === 'oneway' ? 'One way' : 'Return'}`)
+    if (hero.from) lines.push(`From: ${hero.from}`)
+    if (hero.to) lines.push(`To: ${hero.to}`)
+    if (hero.depart) lines.push(`Depart: ${hero.depart}`)
+    if (hero.ret) lines.push(`Return: ${hero.ret}`)
+    if (hero.travellers) lines.push(`Travellers: ${hero.travellers}`)
+    if (hero.cabin) lines.push(`Cabin: ${hero.cabin}`)
+  }
+  return lines.join('\n')
+}
+
+export function ContactForm({ defaultDestination, heroDefaults }) {
   const {
     register,
     handleSubmit,
@@ -17,9 +39,32 @@ export function ContactForm({ defaultDestination }) {
   } = useForm({
     resolver: zodResolver(contactSchema),
     defaultValues: {
+      fullName: '',
+      email: '',
+      phone: '',
       destination: defaultDestination || '',
+      departureDate: '',
+      notes: '',
     },
   })
+
+  useEffect(() => {
+    if (!heroDefaults) return
+    const extra = buildNotesFromHero(heroDefaults)
+    reset({
+      fullName: heroDefaults.fullName || '',
+      email: heroDefaults.email || '',
+      phone: heroDefaults.phone || '',
+      destination:
+        heroDefaults.to ||
+        heroDefaults.destination ||
+        defaultDestination ||
+        '',
+      departureDate:
+        heroDefaults.departure || heroDefaults.depart || '',
+      notes: extra,
+    })
+  }, [heroDefaults, defaultDestination, reset])
 
   const onSubmit = async (values) => {
     try {
@@ -34,13 +79,20 @@ export function ContactForm({ defaultDestination }) {
         ]
           .filter(Boolean)
           .join('\n'),
-        type: 'contact',
+        type: heroDefaults?.type === 'flight' ? 'flight_enquiry' : 'contact',
       })
       notify({
         title: 'Message sent',
         description: 'We will respond within two working hours.',
       })
-      reset({ destination: defaultDestination || '' })
+      reset({
+        fullName: '',
+        email: '',
+        phone: '',
+        destination: defaultDestination || '',
+        departureDate: '',
+        notes: '',
+      })
     } catch (e) {
       notify({
         variant: 'destructive',

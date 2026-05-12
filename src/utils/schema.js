@@ -1,16 +1,15 @@
+import { BRAND } from '@/config/brand'
+
 export function travelAgencySchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'TravelAgency',
-    name: 'Marvel Travel UK',
+    name: BRAND.name,
     url: typeof window !== 'undefined' ? window.location.origin : '',
     telephone: '+442033322614',
-    email: 'info@marveltravel.example',
+    email: BRAND.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '40 Arundel Gardens',
-      addressLocality: 'Ilford',
-      postalCode: 'IG3 9SX',
       addressCountry: 'GB',
     },
     priceRange: '££',

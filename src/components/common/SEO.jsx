@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { BRAND } from '@/config/brand'
 
 export function SEO({
   title,
@@ -7,7 +8,7 @@ export function SEO({
   jsonLd,
   image,
 }) {
-  const site = 'Marvel Travel UK'
+  const site = BRAND.name
   const fullTitle = title ? `${title} | ${site}` : site
   const origin =
     typeof window !== 'undefined' ? window.location.origin : ''

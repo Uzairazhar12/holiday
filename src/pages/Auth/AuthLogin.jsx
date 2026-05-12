@@ -60,7 +60,7 @@ export default function AuthLogin() {
 
   return (
     <>
-      <SEO title="Admin sign in" description="Secure Marvel Travel UK dashboard access." />
+      <SEO title="Admin sign in" description="Secure EPIC HOLIDAYS dashboard access." />
       <div className="flex min-h-screen items-center justify-center bg-background px-4">
         <Card className="w-full max-w-md shadow-[var(--shadow-soft)]">
           <CardHeader>
