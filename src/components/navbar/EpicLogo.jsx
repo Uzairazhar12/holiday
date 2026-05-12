@@ -4,11 +4,11 @@ import { BRAND } from '@/config/brand'
 
 const sizeClass = {
   header:
-    'h-[3.35rem] w-auto max-w-[min(90vw,300px)] object-contain object-left sm:h-[4.5rem] sm:max-w-[min(85vw,360px)] md:h-[5rem] md:max-w-[400px]',
+    'h-[4rem] w-auto max-w-[min(92vw,340px)] object-contain object-left sm:h-[5.35rem] sm:max-w-[min(88vw,420px)] md:h-[5.85rem] md:max-w-[460px]',
   footer:
-    'mx-auto h-[4rem] w-auto max-w-[min(92vw,300px)] object-contain sm:mx-0 sm:h-[5.25rem] sm:max-w-[min(100%,380px)] md:h-[5.75rem] md:max-w-[440px]',
+    'mx-auto h-[4.75rem] w-auto max-w-[min(94vw,340px)] object-contain sm:mx-0 sm:h-[6rem] sm:max-w-[min(100%,440px)] md:h-[6.75rem] md:max-w-[500px]',
   drawer:
-    'mx-auto h-[4.25rem] w-auto max-w-[260px] object-contain sm:h-[5rem] sm:max-w-[300px]',
+    'mx-auto h-[5rem] w-auto max-w-[300px] object-contain sm:h-[5.85rem] sm:max-w-[340px]',
 }
 
 function logoUrl() {
@@ -33,8 +33,8 @@ export function EpicLogo({ className = '', variant = 'header', onNavigate }) {
       <img
         src={logoUrl()}
         alt=""
-        width={440}
-        height={200}
+        width={480}
+        height={220}
         decoding="async"
         className={cn('block w-auto', sizeClass[variant] ?? sizeClass.header)}
       />
