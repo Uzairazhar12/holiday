@@ -2,13 +2,7 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, MessageCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import { EpicTopBar } from '@/components/navbar/EpicTopBar'
 import { EpicLogo } from '@/components/navbar/EpicLogo'
@@ -33,8 +27,8 @@ export function Navbar() {
     <div className="sticky top-0 z-50 shadow-sm">
       <EpicTopBar />
       <header className="border-b border-slate-200/90 bg-white">
-        <div className="mx-auto flex h-[4.75rem] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
-          <EpicLogo />
+        <div className="mx-auto flex min-h-[5.5rem] max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:min-h-[5.75rem] sm:px-6 lg:px-8">
+          <EpicLogo variant="header" />
 
           <nav className="hidden items-center gap-11 md:flex">
             {links.map((l) => (
@@ -71,31 +65,46 @@ export function Navbar() {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" aria-label="Open menu">
-                <Menu className="h-5 w-5 text-slate-800" />
+                <Menu className="h-6 w-6 text-slate-800" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="flex flex-col gap-6">
-              <SheetHeader>
-                <SheetTitle className="font-display text-left text-2xl font-bold text-slate-900">
-                  Menu
-                </SheetTitle>
-              </SheetHeader>
-              <nav className="flex flex-col gap-2">
+            <SheetContent
+              side="right"
+              className={cn(
+                'flex w-[min(100vw-1rem,22rem)] flex-col gap-0 border-l-2 border-teal-600/30 p-0 pt-14',
+                'bg-gradient-to-b from-slate-50 via-white to-teal-50/50 shadow-2xl',
+                '[&>button]:right-3 [&>button]:top-3 [&>button]:rounded-full [&>button]:border [&>button]:border-teal-200 [&>button]:bg-white [&>button]:p-2.5 [&>button]:text-teal-900 [&>button]:shadow-md [&>button]:hover:bg-teal-50',
+              )}
+            >
+              <SheetTitle className="sr-only">Main navigation</SheetTitle>
+              <div className="border-b border-teal-200/60 bg-white/95 px-5 py-5">
+                <EpicLogo
+                  variant="drawer"
+                  onNavigate={() => setOpen(false)}
+                  className="w-full"
+                />
+              </div>
+              <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-5">
                 {[...links, ...moreLinks].map((l) => (
                   <Link
                     key={l.to}
                     to={l.to}
                     onClick={() => setOpen(false)}
-                    className="rounded-lg px-3 py-3 text-lg font-bold text-slate-800 hover:bg-slate-50"
+                    className="rounded-xl border border-transparent px-4 py-3.5 text-lg font-bold text-slate-800 transition hover:border-teal-200/80 hover:bg-teal-600/10 hover:text-teal-900"
                   >
                     {l.label}
                   </Link>
                 ))}
                 <Button
                   asChild
-                  className="mt-3 h-12 w-full rounded-full bg-[#25D366] text-base font-bold text-white hover:bg-[#20bd5a]"
+                  className="mt-4 h-12 w-full rounded-full bg-[#25D366] text-base font-bold text-white shadow-md hover:bg-[#20bd5a]"
                 >
-                  <a href={wa} target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}>
+                  <a
+                    href={wa}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setOpen(false)}
+                  >
                     WhatsApp
                   </a>
                 </Button>
