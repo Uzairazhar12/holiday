@@ -45,9 +45,9 @@ export function Navbar() {
                 end={l.end}
                 className={({ isActive }) =>
                   cn(
-                    'relative text-sm font-semibold text-slate-600 transition hover:text-[#1A237E]',
+                    'relative text-sm font-semibold text-slate-600 transition hover:text-teal-800',
                     isActive &&
-                      'font-bold text-[#1A237E] after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-[#1A237E]',
+                      'font-bold text-teal-900 after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-teal-600',
                   )
                 }
               >
@@ -72,12 +72,12 @@ export function Navbar() {
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" aria-label="Open menu">
-                <Menu className="h-5 w-5 text-[#1A237E]" />
+                <Menu className="h-5 w-5 text-slate-800" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="flex flex-col gap-6">
               <SheetHeader>
-                <SheetTitle className="font-display text-left text-2xl text-[#1A237E]">
+                <SheetTitle className="font-display text-left text-2xl text-slate-900">
                   Menu
                 </SheetTitle>
               </SheetHeader>

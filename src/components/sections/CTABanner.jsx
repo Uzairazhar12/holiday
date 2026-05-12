@@ -5,7 +5,7 @@ import { BRAND } from '@/config/brand'
 export function CTABanner() {
   const wa = `https://wa.me/${BRAND.whatsappDigits.replace(/\D/g, '')}`
   return (
-    <section className="bg-[linear-gradient(120deg,oklch(0.42_0.12_260),oklch(0.32_0.09_260))] py-16 text-primary-foreground sm:py-20">
+    <section className="bg-gradient-to-br from-teal-700 via-teal-800 to-slate-900 py-16 text-primary-foreground sm:py-20">
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div className="max-w-xl space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.26em] text-white/70">

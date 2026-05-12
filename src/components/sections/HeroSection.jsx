@@ -16,6 +16,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { BRAND } from '@/config/brand'
+import { EPIC } from '@/config/epicTheme'
 import { getHeroBackgroundImageUrls, HERO_FALLBACK_IMAGES } from '@/config/heroBackgrounds'
 import { useHeroSearchStore } from '@/store/heroSearchStore'
 import { cn } from '@/lib/utils'
@@ -56,7 +57,7 @@ function randomCaptcha() {
 
 function FieldLabel({ icon: Icon, children }) {
   return (
-    <label className="mb-1.5 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-[#E65100]">
+    <label className="mb-1.5 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-teal-800">
       {Icon ? <Icon className="h-3.5 w-3.5 shrink-0 opacity-90" aria-hidden /> : null}
       {children}
     </label>
@@ -64,7 +65,14 @@ function FieldLabel({ icon: Icon, children }) {
 }
 
 const selectClass =
-  'h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-800 shadow-sm outline-none ring-offset-white focus:ring-2 focus:ring-[#283593]/30'
+  'h-11 w-full rounded-lg border border-slate-200 bg-white px-3 text-sm text-slate-800 shadow-sm outline-none ring-offset-white focus:ring-2 focus:ring-teal-500/30'
+
+const gradientBtn =
+  'h-12 w-full rounded-xl bg-gradient-to-r from-teal-600 to-slate-900 text-base font-semibold text-white shadow-lg hover:opacity-[0.97]'
+
+const tabActive =
+  'bg-gradient-to-r from-teal-600 to-slate-800 text-white shadow-md'
+const tabInactive = 'bg-slate-100 text-slate-700 hover:bg-slate-200'
 
 export function HeroSection() {
   const navigate = useNavigate()
@@ -138,7 +146,6 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[min(100vh,920px)] overflow-hidden">
-      {/* Background slideshow */}
       <div className="absolute inset-0 bg-slate-900">
         {slides.map((src, i) => (
           <motion.img
@@ -152,13 +159,9 @@ export function HeroSection() {
             loading={i === 0 ? 'eager' : 'lazy'}
           />
         ))}
-        {/* Orange → navy overlay (reference layout) */}
         <div
           className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(105deg, rgba(230,81,0,0.88) 0%, rgba(230,81,0,0.35) 38%, rgba(40,53,147,0.55) 62%, rgba(26,35,126,0.92) 100%)',
-          }}
+          style={{ background: EPIC.heroOverlay }}
         />
       </div>
 
@@ -181,18 +184,15 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.08 }}
-          className="mt-10 w-full max-w-5xl rounded-2xl border border-white/25 bg-white p-4 shadow-[0_28px_80px_-20px_rgba(0,0,0,0.45)] sm:p-6 md:p-8"
+          className="mt-10 w-full max-w-5xl rounded-2xl border border-white/20 bg-white p-4 shadow-[0_28px_80px_-20px_rgba(0,0,0,0.45)] sm:p-6 md:p-8"
         >
-          {/* Tabs */}
           <div className="mb-6 flex flex-wrap gap-2">
             <button
               type="button"
               onClick={() => setTab('holidays')}
               className={cn(
                 'inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition',
-                tab === 'holidays'
-                  ? 'bg-gradient-to-r from-[#E65100] to-[#1A237E] text-white shadow-md'
-                  : 'bg-slate-100 text-[#283593] hover:bg-slate-200',
+                tab === 'holidays' ? tabActive : tabInactive,
               )}
             >
               <Palmtree className="h-4 w-4" aria-hidden />
@@ -203,9 +203,7 @@ export function HeroSection() {
               onClick={() => setTab('flights')}
               className={cn(
                 'inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition',
-                tab === 'flights'
-                  ? 'bg-gradient-to-r from-[#E65100] to-[#1A237E] text-white shadow-md'
-                  : 'bg-slate-100 text-[#283593] hover:bg-slate-200',
+                tab === 'flights' ? tabActive : tabInactive,
               )}
             >
               <Plane className="h-4 w-4" aria-hidden />
@@ -303,10 +301,7 @@ export function HeroSection() {
                   />
                 </div>
               </div>
-              <Button
-                type="submit"
-                className="h-12 w-full rounded-xl bg-gradient-to-r from-[#E65100] to-[#1A237E] text-base font-semibold text-white shadow-lg hover:opacity-[0.97]"
-              >
+              <Button type="submit" className={gradientBtn}>
                 <Search className="mr-2 h-5 w-5" aria-hidden />
                 Search Holidays
               </Button>
@@ -320,7 +315,7 @@ export function HeroSection() {
                   className={cn(
                     'rounded-full px-4 py-2 text-sm font-semibold',
                     flightTrip === 'return'
-                      ? 'bg-[#1A237E] text-white'
+                      ? 'bg-slate-800 text-white'
                       : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
                   )}
                 >
@@ -332,7 +327,7 @@ export function HeroSection() {
                   className={cn(
                     'rounded-full px-4 py-2 text-sm font-semibold',
                     flightTrip === 'oneway'
-                      ? 'bg-[#1A237E] text-white'
+                      ? 'bg-slate-800 text-white'
                       : 'bg-slate-100 text-slate-700 hover:bg-slate-200',
                   )}
                 >
@@ -405,10 +400,7 @@ export function HeroSection() {
                   </select>
                 </div>
               </div>
-              <Button
-                type="submit"
-                className="h-12 w-full rounded-xl bg-gradient-to-r from-[#E65100] to-[#1A237E] text-base font-semibold text-white shadow-lg hover:opacity-[0.97]"
-              >
+              <Button type="submit" className={gradientBtn}>
                 <Search className="mr-2 h-5 w-5" aria-hidden />
                 Search Flights
               </Button>
