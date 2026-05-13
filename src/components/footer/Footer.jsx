@@ -22,7 +22,7 @@ export function Footer() {
             <ul className="space-y-2.5 text-center text-sm text-muted sm:text-left">
               <li>
                 <Link className="inline-block hover:text-teal-800" to="/tours">
-                  Tours
+                  Tour
                 </Link>
               </li>
               <li>
