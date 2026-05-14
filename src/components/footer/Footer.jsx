@@ -37,7 +37,7 @@ export function Footer() {
               </li>
               <li>
                 <Link className="inline-block hover:text-teal-800" to="/contact">
-                  Contac
+                  Contact
                 </Link>
               </li>
             </ul>
