@@ -11,7 +11,7 @@ export function Footer() {
             <EpicLogo variant="footer" className="sm:justify-start" />
             <p className="max-w-md text-sm leading-relaxed text-muted">
               ATOL-protected packages, competitive fares and specialist support from the
-              UK.
+              UK
             </p>
           </div>
 
