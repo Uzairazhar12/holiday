@@ -68,7 +68,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-4 border-t border-border pt-8 text-center text-xs leading-relaxed text-muted sm:flex-row sm:items-start sm:justify-between sm:text-left">
           <p className="shrink-0 sm:max-w-[40%]">
-            © {new Date().getFullYear()} {BRAND.name}. All rights reserved
+            © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
           </p>
           <p className="mx-auto max-w-lg sm:mx-0 sm:max-w-[55%] sm:text-right">
             Independent travel service provider — not affiliated with airlines unless
