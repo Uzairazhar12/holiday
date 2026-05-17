@@ -71,7 +71,7 @@ export function Footer() {
             © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
           </p>
           <p className="mx-auto max-w-lg sm:mx-0 sm:max-w-[55%] sm:text-right">
-            Independent travel service provider  not affiliated with airlines unless
+            Independent travel service provider — not affiliated with airlines unless
             stated. Bookings subject to availability and supplier terms.
           </p>
         </div>
