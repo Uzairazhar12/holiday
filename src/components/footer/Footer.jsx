@@ -32,7 +32,7 @@ export function Footer() {
               </li>
               <li>
                 <Link className="inline-block hover:text-teal-800" to="/about">
-                  Abou
+                  About
                 </Link>
               </li>
               <li>
