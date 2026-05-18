@@ -72,7 +72,7 @@ export function Footer() {
           </p>
           <p className="mx-auto max-w-lg sm:mx-0 sm:max-w-[55%] sm:text-right">
             Independent travel service provider — not affiliated with airlines unless
-            stated. Bookings subject to availability and supplier terms.
+            stated. Bookings subject to availability and supplier terms
           </p>
         </div>
       </div>
