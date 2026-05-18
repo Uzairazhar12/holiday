@@ -45,7 +45,7 @@ export function Footer() {
 
           <div className="rounded-xl border border-border/80 bg-background/50 px-5 py-4 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0">
             <p className="mb-3 text-center text-sm font-semibold text-foreground sm:text-left">
-              Contac
+              Contact
             </p>
             <ul className="space-y-2.5 text-center text-sm text-muted sm:text-left">
               <li>
