@@ -27,7 +27,7 @@ export function Navbar() {
     <div className="sticky top-0 z-50 shadow-sm">
       <EpicTopBar />
       <header className="border-b border-slate-200/90 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-1 sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-0.5 sm:px-6 lg:px-8">
           <EpicLogo variant="header" />
 
           <nav className="hidden items-center gap-11 md:flex">
@@ -52,7 +52,7 @@ export function Navbar() {
           <div className="hidden items-center gap-3 md:flex">
             <Button
               asChild
-              className="h-11 gap-2 rounded-full border-2 border-[#25D366] bg-white px-5 text-base font-bold text-[#0f766e] shadow-none hover:bg-emerald-50"
+              className="h-10 gap-2 rounded-full border-2 border-[#25D366] bg-white px-4 text-sm font-bold text-[#0f766e] shadow-none hover:bg-emerald-50"
               variant="outline"
             >
               <a href={wa} target="_blank" rel="noopener noreferrer">

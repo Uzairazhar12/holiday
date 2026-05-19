@@ -4,7 +4,7 @@ import { BRAND } from '@/config/brand'
 
 const sizeClass = {
   header:
-    'h-[4rem] w-auto max-w-[min(92vw,340px)] object-contain object-left sm:h-[5.35rem] sm:max-w-[min(88vw,420px)] md:h-[5.85rem] md:max-w-[460px]',
+    'h-[3.5rem] w-auto max-w-[min(92vw,300px)] object-contain object-left sm:h-[4.75rem] sm:max-w-[min(88vw,380px)] md:h-[5.15rem] md:max-w-[420px]',
   footer:
     'mx-auto h-[4.75rem] w-auto max-w-[min(94vw,340px)] object-contain sm:mx-0 sm:h-[6rem] sm:max-w-[min(100%,440px)] md:h-[6.75rem] md:max-w-[500px]',
   drawer:
