@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import { SEO } from '@/components/common/SEO'
 import { travelAgencySchema } from '@/utils/schema'
 import { HeroSection } from '@/components/sections/HeroSection'
+import { ServiceHighlightsSection } from '@/components/sections/ServiceHighlightsSection'
 import { FeaturedToursSection } from '@/components/sections/FeaturedToursSection'
+import { PartnersSection } from '@/components/sections/PartnersSection'
 import { DestinationsSection } from '@/components/sections/DestinationsSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { WhyChooseSection } from '@/components/sections/WhyChooseSection'
@@ -54,8 +56,10 @@ export default function Home() {
         jsonLd={travelAgencySchema()}
       />
       <HeroSection />
+      <ServiceHighlightsSection />
       <FeaturedToursSection tours={loading ? [] : tours} />
       <DestinationsSection destinations={DEMO_DESTINATIONS} />
+      <PartnersSection />
       <TestimonialsSection testimonials={testimonials} />
       <WhyChooseSection />
       <BlogPreviewSection blogs={blogs} />
