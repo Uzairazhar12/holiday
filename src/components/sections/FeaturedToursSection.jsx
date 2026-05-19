@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export function FeaturedToursSection({ tours }) {
   return (
-    <section id="featured-tours" className="border-b border-border bg-background py-16 sm:py-24">
+    <section id="featured-tours" className="border-b border-border bg-slate-50 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-xl space-y-3">
@@ -23,7 +23,7 @@ export function FeaturedToursSection({ tours }) {
             <Link to="/tours">Browse all tours</Link>
           </Button>
         </div>
-        <div className="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 items-stretch gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {(tours || []).slice(0, 6).map((t, i) => (
             <TourCard key={t.id || t.slug} tour={t} index={i} />
           ))}

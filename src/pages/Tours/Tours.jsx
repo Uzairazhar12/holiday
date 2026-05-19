@@ -142,7 +142,7 @@ export default function Tours() {
           {loading ? (
             <div className="grid gap-8 md:grid-cols-2">
               {Array.from({ length: 4 }).map((_, i) => (
-                <Skeleton key={i} className="h-[420px] w-full rounded-[var(--radius-lg)]" />
+                <Skeleton key={i} className="h-[28rem] w-full rounded-2xl" />
               ))}
             </div>
           ) : tours.length === 0 ? (
@@ -154,7 +154,7 @@ export default function Tours() {
               .
             </p>
           ) : (
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-8 xl:grid-cols-3">
               {tours.map((t, i) => (
                 <TourCard key={t.id || t.slug} tour={t} index={i} />
               ))}
