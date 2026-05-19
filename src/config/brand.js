@@ -4,8 +4,8 @@ export const BRAND = {
   /** Full lockup (PNG) in `/public/brand/` — bump `logoAssetVersion` when file changes */
   logoSrc: '/brand/epic-tour-logo.png',
   logoAssetVersion: '59b4d57f',
-  /** Tab icon — cropped mark from logo (no company name) */
-  iconSrc: '/brand/epic-tour-icon.png',
+  /** Browser tab icon (custom mark — matches site teal/slate theme) */
+  iconSrc: '/favicon.svg',
   email: 'info@epictour.co.uk',
   phoneDisplay: '0203 332 2614',
   phoneTel: 'tel:02033322614',
