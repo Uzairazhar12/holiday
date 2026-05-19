@@ -1,30 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="EPIC TOUR">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EPIC TOUR">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#14b8a6"/>
-      <stop offset="55%" stop-color="#0f766e"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+    <linearGradient id="bg" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="0.42" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#0f172a"/>
     </linearGradient>
+    <linearGradient id="ring" x1="8" y1="32" x2="56" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#99f6e4" stop-opacity="0.45"/>
+      <stop offset="0.5" stop-color="#f0fdfa"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#042f2e" flood-opacity="0.35"/>
+    </filter>
   </defs>
-  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
-  <!-- Globe arc -->
+
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+
+  <!-- Travel arc (logo-style swoosh) -->
   <path
-    d="M5 21c4-9 12-13 22-10"
+    d="M10 42 C10 22 28 12 46 18"
+    fill="none"
+    stroke="url(#ring)"
+    stroke-width="3.25"
+    stroke-linecap="round"
+  />
+  <path
+    d="M14 46 C16 30 32 22 50 27"
     fill="none"
     stroke="#ecfdf5"
-    stroke-width="1.6"
+    stroke-width="1.5"
     stroke-linecap="round"
-    opacity="0.95"
+    opacity="0.28"
   />
-  <!-- Mountains -->
-  <path
-    d="M7 23l4-6 3 4 4-7 5 9H7z"
-    fill="#ecfdf5"
-    opacity="0.9"
-  />
+
+  <!-- Mountains + horizon -->
+  <path fill="#f0fdfa" d="M12 44 L20 28 L28 36 L37 21 L52 44 Z"/>
+  <path fill="#115e59" opacity="0.45" d="M10 46 Q32 41 54 46 V54 H10 Z"/>
+
   <!-- Airplane -->
-  <path
-    d="M17 8l9 5-5 1 2 4-3-1-2 5-1-8z"
-    fill="#ffffff"
-  />
+  <g filter="url(#soft)">
+    <path
+      fill="#ffffff"
+      d="M33 15 L54 27 L45 28.5 L48.5 36 L41.5 32.5 L37.5 42 L35 31 L27.5 29 L33 24.5 Z"
+    />
+  </g>
 </svg>
