@@ -109,62 +109,7 @@ export const DEMO_TOURS = [
   },
 ]
 
-export const DEMO_DESTINATIONS = [
-  {
-    slug: 'paris',
-    city: 'Paris',
-    country: 'France',
-    code: 'CDG',
-    priceFrom: 150,
-    image:
-      'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80',
-  },
-  {
-    slug: 'istanbul',
-    city: 'Istanbul',
-    country: 'Turkey',
-    code: 'IST',
-    priceFrom: 220,
-    image:
-      'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80',
-  },
-  {
-    slug: 'bangkok',
-    city: 'Bangkok',
-    country: 'Thailand',
-    code: 'BKK',
-    priceFrom: 420,
-    image:
-      'https://images.unsplash.com/photo-1563495285-ab7e888ab91d?w=800&q=80',
-  },
-  {
-    slug: 'dubai',
-    city: 'Dubai',
-    country: 'UAE',
-    code: 'DXB',
-    priceFrom: 310,
-    image:
-      'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80',
-  },
-  {
-    slug: 'new-york',
-    city: 'New York',
-    country: 'USA',
-    code: 'JFK',
-    priceFrom: 450,
-    image:
-      'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80',
-  },
-  {
-    slug: 'islamabad',
-    city: 'Islamabad',
-    country: 'Pakistan',
-    code: 'ISB',
-    priceFrom: 380,
-    image:
-      'https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80',
-  },
-]
+export { DEMO_DESTINATIONS, DESTINATION_REGIONS } from '@/config/destinationRegions'
 
 export const DEMO_TESTIMONIALS = [
   {

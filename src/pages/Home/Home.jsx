@@ -13,7 +13,6 @@ import { CTABanner } from '@/components/sections/CTABanner'
 import { listTours } from '@/services/tourService'
 import { listTestimonials } from '@/services/testimonialService'
 import { listBlogs } from '@/services/blogService'
-import { DEMO_DESTINATIONS } from '@/utils/demoData'
 
 export default function Home() {
   const [tours, setTours] = useState([])
@@ -58,7 +57,7 @@ export default function Home() {
       <HeroSection />
       <ServiceHighlightsSection />
       <FeaturedToursSection tours={loading ? [] : tours} />
-      <DestinationsSection destinations={DEMO_DESTINATIONS} />
+      <DestinationsSection />
       <PartnersSection />
       <TestimonialsSection testimonials={testimonials} />
       <WhyChooseSection />
